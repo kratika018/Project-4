@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background: white;
+    color: rgb(80, 79, 79);
+    line-height: 1.6;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #4e9af1;
+    color: white;
+    padding: 19px;
+}
+
+.logo{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav a{
+    color: white;
+    margin-left: 15px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+nav a:hover{
+    text-decoration: underline;
+}
+.hero{
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(to right, #c9eaff, #ffffff);
+}
