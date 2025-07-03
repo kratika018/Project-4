@@ -16,6 +16,7 @@
             <a href="#">About</a>
             <a href="#">Contact</a>
         </nav>
+        <div class="hamburger" onclick="toggleMenu()">&#9776</div>
     </header>
 
     <main>
@@ -24,6 +25,26 @@
             <p>Discover names by gender, origin, meaning and more!</p>
             <a href="#" class="btn"> Start Searching</a>
         </section>
+
+        <section class="dashboard">
+            <aside class="slidebar">
+                <ul>
+                    <li>Dashboard</li>
+                    <li>Favorites</li>
+                    <li>Suggestions</li>
+                </ul>
+            </aside>
+            <div class="main-content">
+                <h2>Welcome to your Name Dashboard</h2>
+                <p>You'll be able to explore, search, and save your favorite names here!</p>
+            </div>
+        </section>
     </main>
+
+    <script>
+        function toggleMenu(){
+            document.getElementById("navbar").classList.toggle("show");
+        }
+    </script>
 </body>
 </html>
