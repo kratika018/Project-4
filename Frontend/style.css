@@ -1,68 +1,205 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body{
-    background: white;
-    color: rgb(80, 79, 79);
-    line-height: 1.6;
+body {
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
 }
 
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #4e9af1;
-    color: white;
-    padding: 19px;
-    position: relative;
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #4e9af1;
+  color: white;
+  padding: 1rem 2rem;
+  position: relative;
 }
 
-.hamburger{
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, #c9eaff, #ffffff);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  background: #4e9af1;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #347acc;
+}
+
+/* Dashboard*/
+.dashboard {
+  display: flex;
+  padding: 2rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.sidebar {
+  width: 200px;
+  background: #f0f0f0;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  background: #d6eaff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.sidebar li:hover {
+  background: #b3daff;
+}
+
+.main-content {
+  flex: 1;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .hamburger{
+        display: block;
+    }
+  nav {
     display: none;
-    font-size: 20px;
-    cursor: pointer;
+    flex-direction: column;
+    background-color: #4e9af1;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  nav a {
+    padding: 1rem;
+    border-top: 1px solid white;
+  }
+
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .search-section {
+  background: #ffffff;
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 }
 
-.logo{
-    font-size: 24px;
-    font-weight: bold;
+.search-section h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
 }
 
-nav a{
-    color: white;
-    margin-left: 15px;
-    font-weight: 500;
-    text-decoration: none;
+.search-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
 }
 
-nav a:hover{
-    text-decoration: underline;
+.search-form input,
+.search-form select {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  min-width: 150px;
+  font-size: 1rem;
 }
-.hero{
-    text-align: center;
-    padding: 50px;
-    background: linear-gradient(to right, #c9eaff, #ffffff);
+
+.search-form .btn {
+  padding: 0.75rem 1.5rem;
+  background: #4e9af1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
-.hero h1{
-    font-size: 40px;
-    margin-bottom: 15px;
+
+.search-form .btn:hover {
+  background: #347acc;
 }
-.hero p{
-        font-size: 20px;
-    margin-bottom: 28px;
-}
-.btn{
-    background: rgb(83, 181, 219);
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 0.75rem 1.5rem;
-    border-radius: 6px
-}
-.btn :hover{
-    background: #3074c1;
 }
