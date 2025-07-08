@@ -7,76 +7,61 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
     <header>
-        <div class="logo"> Baby Name Finder</div>
-        <nav>
+        <div class="logo">Baby Name Finder</div>
+        <nav id="navbar">
             <a href="#">Home</a>
             <a href="#">Search</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
+            <a href="#">Dashboard</a>
         </nav>
-        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <div class="toggle" onclick="toggleMenu()">&#9776;</div>
     </header>
 
     <main>
-        <section class="hero">
-            <h1>Find Perfect Baby Name</h1>
-            <p>Discover names by gender, origin, meaning and more!</p>
-            <a href="#" class="btn"> Start Searching</a>
-        </section>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Find the Perfect Baby Name</h1>
+      <p>Explore names based on gender, origin, and meaning with ease.</p>
+      <a href="#" class="btn">Start Exploring</a>
+    </div>
+  </section>
 
-        <section>
-            <h2>Search for Baby Names</h2>
-            <form action="" class="search-form">
+  <section class="search-section">
+  <h2>Search Baby Names</h2>
+  <form class="search-form">
+    <input type="text" placeholder="Enter name" name="name" />
+    
+    <select name="gender">
+      <option value="">Gender</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="unisex">Unisex</option>
+    </select>
+    
+    <select name="origin">
+      <option value="">Origin</option>
+      <option value="indian">Indian</option>
+      <option value="english">English</option>
+      <option value="arabic">Arabic</option>
+    </select>
+    
+    <select name="startsWith">
+      <option value="">Starts With</option>
+      <!-- A to Z options -->
+      ${Array.from({ length: 26 }, (_, i) => 
+        <option value="${String.fromCharCode(65 + i)}">${String.fromCharCode(65 + i)}</option>).join("")}
+    </select>
+    
+    <button type="submit" class="btn">Search</button>
+  </form>
+</section>
 
-                <input type="text" placeholder="Enter name..."><br>
+</main>
 
-                <select > 
-                    <option value="">Gender</option>
-                    <option value="boy">Boy</option>
-                    <option value="girl">Girl</option>
-                    <option value="other">other</option>
-                </select> <br>
+    <footer>
+        <p> &copy; 2025 Baby Name Finder</p>
+    </footer>
 
-                <select > 
-                    <option value="">Starts With</option>
-                    <option value="a">A</option>
-                    <option value="b">B</option>
-                    <option value="c">C</option><br>
-                </select>
-
-                <select >
-                    <option value="">Origin</option>
-                    <option value="indian">Indian</option>
-                    <option value="english">English</option>
-                    <option value="arabic">Arabic</option>
-                    <option value="french">French</option>
-                </select><br>
-
-                <button type="submit" class="btn2">Search</button>
-            </form>
-        </section>
-
-        <section class="dashboard">
-            <aside class="slidebar">
-                <ul>
-                    <li>Dashboard</li>
-                    <li>Favorites</li>
-                    <li>Suggestions</li>
-                </ul>
-            </aside>
-            <div class="main-content">
-                <h2>Welcome to your Name Dashboard</h2>
-                <p>You'll be able to explore, search, and save your favorite names here!</p>
-            </div>
-        </section>
-    </main>
-
-    <script>
-        function toggleMenu(){
-            document.getElementById("navbar").classList.toggle("show");
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

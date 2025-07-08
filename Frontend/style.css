@@ -1,31 +1,79 @@
-
-* {
-  margin: 0;
+*{
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
+}
+
+body{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: white;
+  color: rgb(56, 55, 55);
 }
 
-body {
-  background: #f9f9f9;
-  color: #333;
-  line-height: 1.6;
-}
-
-
-header {
+header{
+  background: rgb(78, 154, 241);
+  color: white;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+nav a{
+  margin: 16px;
+  color: white;
+  text-decoration: none;
+}
+
+.hero{
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, #c9eaff, #ffffff);
+}
+
+.hero-content {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+.btn {
   background: #4e9af1;
   color: white;
-  padding: 1rem 2rem;
-  position: relative;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 1rem;
+  display: inline-block;
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #e0e0e0;
+  margin-top: 2rem;
 }
 
 nav {
@@ -43,122 +91,32 @@ nav a:hover {
   text-decoration: underline;
 }
 
-
-.hamburger {
+.toggle {
   display: none;
-  font-size: 1.5rem;
+  font-size: 2rem;
   cursor: pointer;
 }
 
-
-.hero {
-  text-align: center;
-  padding: 4rem 2rem;
-  background: linear-gradient(to right, #c9eaff, #ffffff);
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-}
-
-.btn {
-  background: #4e9af1;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-
-.btn:hover {
-  background: #347acc;
-}
-
-/* Dashboard*/
-.dashboard {
-  display: flex;
-  padding: 2rem;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-.sidebar {
-  width: 200px;
-  background: #f0f0f0;
-  padding: 1rem;
-  border-radius: 8px;
-}
-
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-}
-
-.sidebar li {
-  padding: 0.75rem;
-  margin-bottom: 0.5rem;
-  background: #d6eaff;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background 0.2s ease;
-}
-
-.sidebar li:hover {
-  background: #b3daff;
-}
-
-.main-content {
-  flex: 1;
-  padding: 1rem;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-@media (max-width: 768px) {
-    .hamburger{
-        display: block;
-    }
+/* @media (max-width: 768px) { */
   nav {
     display: none;
     flex-direction: column;
-    background-color: #4e9af1;
+    background: #4e9af1;
     position: absolute;
     top: 60px;
     left: 0;
     width: 100%;
-    z-index: 999;
+    padding: 1rem;
   }
 
   nav.show {
     display: flex;
   }
 
-  .hamburger {
+  .toggle {
     display: block;
   }
-
-  nav a {
-    padding: 1rem;
-    border-top: 1px solid white;
-  }
-
-  .dashboard {
-    flex-direction: column;
-  }
-
-  .sidebar {
-    width: 100%;
-  }
-
-  .search-section {
+.search-section {
   background: #ffffff;
   padding: 2rem;
   margin: 2rem;
@@ -173,10 +131,11 @@ nav a:hover {
 }
 
 .search-form {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1rem;
-  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .search-form input,
@@ -184,7 +143,6 @@ nav a:hover {
   padding: 0.75rem 1rem;
   border: 1px solid #ccc;
   border-radius: 5px;
-  min-width: 150px;
   font-size: 1rem;
 }
 
@@ -201,5 +159,4 @@ nav a:hover {
 
 .search-form .btn:hover {
   background: #347acc;
-}
 }
