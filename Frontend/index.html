@@ -14,7 +14,7 @@
             <a href="#">Search</a>
             <a href="#">Dashboard</a>
         </nav>
-        <div class="toggle" onclick="toggleMenu()">&#9776;</div>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
     </header>
 
     <main>
@@ -41,19 +41,48 @@
     <select name="origin">
       <option value="">Origin</option>
       <option value="indian">Indian</option>
+      <option value="greek">Greek</option>
       <option value="english">English</option>
       <option value="arabic">Arabic</option>
     </select>
     
     <select name="startsWith">
       <option value="">Starts With</option>
+      <option value="a">A</option>
+      <option value="l">L</option>
+      <option value="z">Z</option>
+      <option value="n">N</option>
       <!-- A to Z options -->
-      ${Array.from({ length: 26 }, (_, i) => 
+      <!-- ${Array.from({ length: 26 }, (_, i) => 
         <option value="${String.fromCharCode(65 + i)}">${String.fromCharCode(65 + i)}</option>).join("")}
-    </select>
+    </select> -->
     
     <button type="submit" class="btn">Search</button>
   </form>
+</section>
+
+<section class="results-section">
+  <h2>Search Results</h2>
+  <div class="results-grid">
+    <div class="name-card">
+      <h3>Aarav</h3>
+      <p><strong>Gender:</strong> Male</p>
+      <p><strong>Origin:</strong> Indian</p>
+      <p><strong>Meaning:</strong> Peaceful</p>
+    </div>
+    <div class="name-card">
+      <h3>Luna</h3>
+      <p><strong>Gender:</strong> Female</p>
+      <p><strong>Origin:</strong> Latin</p>
+      <p><strong>Meaning:</strong> Moon</p>
+    </div>
+    <div class="name-card">
+      <h3>Alex</h3>
+      <p><strong>Gender:</strong> Unisex</p>
+      <p><strong>Origin:</strong> Greek</p>
+      <p><strong>Meaning:</strong> Defender of mankind</p>
+    </div>
+  </div>
 </section>
 
 </main>

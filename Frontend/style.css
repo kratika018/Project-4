@@ -91,7 +91,7 @@ nav a:hover {
   text-decoration: underline;
 }
 
-.toggle {
+.hamburger {
   display: none;
   font-size: 2rem;
   cursor: pointer;
@@ -113,7 +113,7 @@ nav a:hover {
     display: flex;
   }
 
-  .toggle {
+  .hamburger {
     display: block;
   }
 .search-section {
@@ -159,4 +159,44 @@ nav a:hover {
 
 .search-form .btn:hover {
   background: #347acc;
+}
+
+
+/* Results Section */
+.results-section {
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 1000px;
+}
+
+.results-section h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* Cards Grid */
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Name Card */
+.name-card {
+  padding: 1.5rem;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+
+.name-card:hover {
+  transform: translateY(-5px);
+}
+
+.name-card h3 {
+  margin-bottom: 0.5rem;
+  color: #4e9af1;
 }
