@@ -200,3 +200,28 @@ nav a:hover {
   margin-bottom: 0.5rem;
   color: #4e9af1;
 }
+.favorites-section {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.favorites-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.favorite-btn {
+  background: none;
+  border: none;
+  color: #e91e63;
+  font-size: 1.5rem;
+  float: right;
+  cursor: pointer;
+}
+
+.favorite-btn.filled {
+  color: red;
+}

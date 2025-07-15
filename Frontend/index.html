@@ -1,96 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Baby Name Finder</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Baby Name Finder</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <div class="logo">Baby Name Finder</div>
-        <nav id="navbar">
-            <a href="#">Home</a>
-            <a href="#">Search</a>
-            <a href="#">Dashboard</a>
-        </nav>
-        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-    </header>
 
-    <main>
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Find the Perfect Baby Name</h1>
-      <p>Explore names based on gender, origin, and meaning with ease.</p>
-      <a href="#" class="btn">Start Exploring</a>
-    </div>
-  </section>
+  <header>
+    <div class="logo">Baby Name Finder</div>
+    <nav id="navbar">
+      <a href="#">Home</a>
+      <a href="#search">Search</a>
+      <a href="#">Dashboard</a>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+  </header>
 
-  <section class="search-section">
-  <h2>Search Baby Names</h2>
-  <form class="search-form">
-    <input type="text" placeholder="Enter name" name="name" />
-    
-    <select name="gender">
-      <option value="">Gender</option>
-      <option value="male">Male</option>
-      <option value="female">Female</option>
-      <option value="unisex">Unisex</option>
-    </select>
-    
-    <select name="origin">
-      <option value="">Origin</option>
-      <option value="indian">Indian</option>
-      <option value="greek">Greek</option>
-      <option value="english">English</option>
-      <option value="arabic">Arabic</option>
-    </select>
-    
-    <select name="startsWith">
-      <option value="">Starts With</option>
-      <option value="a">A</option>
-      <option value="l">L</option>
-      <option value="z">Z</option>
-      <option value="n">N</option>
-      <!-- A to Z options -->
-      <!-- ${Array.from({ length: 26 }, (_, i) => 
-        <option value="${String.fromCharCode(65 + i)}">${String.fromCharCode(65 + i)}</option>).join("")}
-    </select> -->
-    
-    <button type="submit" class="btn">Search</button>
-  </form>
-</section>
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Find the Perfect Baby Name</h1>
+        <p>Explore names based on gender, origin, and meaning with ease.</p>
+        <a href="#search" class="btn">Start Exploring</a>
+      </div>
+    </section>
 
-<section class="results-section">
-  <h2>Search Results</h2>
-  <div class="results-grid">
-    <div class="name-card">
-      <h3>Aarav</h3>
-      <p><strong>Gender:</strong> Male</p>
-      <p><strong>Origin:</strong> Indian</p>
-      <p><strong>Meaning:</strong> Peaceful</p>
-    </div>
-    <div class="name-card">
-      <h3>Luna</h3>
-      <p><strong>Gender:</strong> Female</p>
-      <p><strong>Origin:</strong> Latin</p>
-      <p><strong>Meaning:</strong> Moon</p>
-    </div>
-    <div class="name-card">
-      <h3>Alex</h3>
-      <p><strong>Gender:</strong> Unisex</p>
-      <p><strong>Origin:</strong> Greek</p>
-      <p><strong>Meaning:</strong> Defender of mankind</p>
-    </div>
-  </div>
-</section>
+    <section id="search" class="search-section">
+      <h2>Search Baby Names</h2>
+      <form class="search-form">
+        <input type="text" name="name" placeholder="Enter name..." />
+        <select name="gender">
+          <option value="">Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="unisex">Unisex</option>
+        </select>
+        <select name="origin">
+          <option value="">Origin</option>
+          <option value="indian">Indian</option>
+          <option value="greek">Greek</option>
+          <option value="latin">Latin</option>
+          <option value="hebrew">Hebrew</option>
+          <option value="arabic">Arabic</option>
+        </select>
+        <select name="startsWith">
+          <option value="">Starts With</option>
+          <option value="a">A</option>
+          <option value="l">L</option>
+          <option value="z">Z</option>
+          <option value="n">N</option>
+        </select>
+        <button class="btn" type="submit">Search</button>
+      </form>
+    </section>
 
-</main>
+    <section class="results-section">
+      <h2>Search Results</h2>
+      <div class="results-grid"></div>
+    </section>
 
-    <footer>
-        <p> &copy; 2025 Baby Name Finder</p>
-    </footer>
+    <section class="favourites-section">
+      <h2>Your Favourites Names</h2>
+      <div class="favourites-grid"></div>
+    </section>
 
-    <script src="script.js"></script>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Baby Name Finder</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
